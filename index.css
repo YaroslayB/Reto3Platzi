@@ -1,0 +1,133 @@
+:root{
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+
+--title: hsl(234, 12%, 34%);
+--subtitle: hsl(229, 6%, 66%);
+--body: hsl(0, 0%, 98%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     /* border: 1px solid red;  */
+    }
+
+body{
+    font-family: 'Poppins', sans-serif;
+     Font-size: 15px;
+    background-color: var(--body);
+}
+.contain{
+    width: 100%;
+    margin: 20px auto;
+    height: auto;   
+}
+.contain-text{
+    width: 90%;
+    text-align: center;
+    max-width:450px;
+    margin: auto;   
+}
+.contain-title{
+    font-weight: 400;
+    font-size: 1.4em;
+    color: var(--title);
+}
+.contain-subtitle{
+    font-weight: 600;
+    font-size: 1.4em;
+    color: var(--title);
+    padding-bottom: 10px;
+}
+.contain-pa{
+    font-size: .9em;
+    color: var(--subtitle);
+    padding-bottom: 30px;
+}
+.contain-cards{
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.card{
+    max-width: 600px;
+    min-width: 200px;
+    margin: 20px auto;
+    padding: 15px 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 9px 10px rgb(209, 207, 207);
+}
+.card-title{
+    color: var(--title);
+    font-size: 1.2em;
+    padding-bottom: 10px;
+}
+.card-text{
+    font-size: .9em;
+    color: var(--subtitle);
+    padding-bottom: 50px;
+}
+.card-img{
+    text-align: end;
+}
+.card-img img{
+    width: 50px;
+    height: 50px;   
+}
+.cyan{
+    border-top: 4px solid var(--Cyan);
+}
+.red{
+    border-top: 4px solid var(--Red);
+}
+.orange{
+    border-top: 4px solid var(--Orange);
+}
+.blue{
+    border-top: 4px solid var(--Blue);
+}
+footer {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  footer p{
+      align-self: flex-end;
+    height: 20px;
+    vertical-align: end;
+    color: rgb(161, 132, 6);
+    font-size: 0.7em;
+  }
+footer a{
+    color: rgb(214, 68, 124);
+  }
+
+
+@media screen and (min-width: 900px){
+      .contain-cards{
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(3, 1fr) ;
+        /* grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr); */
+        grid-column-gap: 30px;
+        max-width: 1000px;
+    }
+    .cyan{
+        grid-row: span 2;
+       align-self: center;
+    }
+    .orange{
+        grid-row: span 2;
+        align-self: center;
+        
+    }
+
+}
